@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         handleRadioButton();
         handleSeekbar();
         handleScrollView();
+        handleHorizontalScroll();
     }
 
     private void handleButton() {
@@ -119,6 +120,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleScrollView() {
         binding.scrollViewBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, ScrollViewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleHorizontalScroll() {
+        binding.horiScrollViewBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, HorizontalScrollViewActivity.class);
             startActivity(intent);
         });
     }

@@ -136,4 +136,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seek_bar_btn" />
+
+    <Button
+        android:id="@+id/hori_scroll_view_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Horizonatal Scroll View"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll_view_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
