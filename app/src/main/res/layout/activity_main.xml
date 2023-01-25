@@ -116,4 +116,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/time_picker_btn" />
+
+    <Button
+        android:id="@+id/seek_bar_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Seek Bar"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

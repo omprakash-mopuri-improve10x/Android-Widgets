@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         handleDatePicker();
         handleTimePicker();
         handleRadioButton();
+        handleSeekbar();
     }
 
     private void handleButton() {
@@ -103,6 +104,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleRadioButton() {
         binding.radioBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, RadioButtonsActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleSeekbar() {
+        binding.seekBarBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, SeekBarActivity.class);
             startActivity(intent);
         });
     }
