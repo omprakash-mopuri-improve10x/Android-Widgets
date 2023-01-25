@@ -106,4 +106,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date_picker_btn" />
+
+    <Button
+        android:id="@+id/radio_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Radio Button"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_picker_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

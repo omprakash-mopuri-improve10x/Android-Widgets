@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         handleAlertDailog();
         handleDatePicker();
         handleTimePicker();
+        handleRadioButton();
     }
 
     private void handleButton() {
@@ -95,6 +96,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleTimePicker() {
         binding.timePickerBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, TimePickerActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleRadioButton() {
+        binding.radioBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, RadioButtonsActivity.class);
             startActivity(intent);
         });
     }

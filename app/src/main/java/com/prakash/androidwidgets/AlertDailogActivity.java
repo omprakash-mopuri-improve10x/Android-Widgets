@@ -23,7 +23,7 @@ public class AlertDailogActivity extends AppCompatActivity {
         binding.backBtn.setOnClickListener(view -> {
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
             alertDialog.setTitle("Alert!");
-            alertDialog.setMessage("Are you for going to back?");
+            alertDialog.setMessage("Are you sure for going to back?");
             alertDialog.setPositiveButton("yes", (dialogInterface, i) -> {
                 finish();
             });
