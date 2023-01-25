@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         handleTimePicker();
         handleRadioButton();
         handleSeekbar();
+        handleScrollView();
     }
 
     private void handleButton() {
@@ -111,6 +112,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleSeekbar() {
         binding.seekBarBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, SeekBarActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleScrollView() {
+        binding.scrollViewBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ScrollViewActivity.class);
             startActivity(intent);
         });
     }
