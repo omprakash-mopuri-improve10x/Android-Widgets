@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/custom_toast_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Custom Toast"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_btn" />
+
+    <Button
+        android:id="@+id/tog_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Toggle Button"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_toast_btn" />
+
+    <Button
+        android:id="@+id/checkbox_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Check Box"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tog_btn" />
+
+    <Button
+        android:id="@+id/spinner_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Spinner"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_btn" />
+
+    <Button
+        android:id="@+id/auto_complete_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Auto Complete TextView"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_btn" />
+
+    <Button
+        android:id="@+id/rating_bar_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Rating Bar"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auto_complete_btn" />
+
+    <Button
+        android:id="@+id/alert_dailog_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Alert Dailog"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating_bar_btn" />
+
+    <Button
+        android:id="@+id/date_picker_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Date Picker"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alert_dailog_btn" />
+
+    <Button
+        android:id="@+id/time_picker_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Time Picker"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_picker_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
