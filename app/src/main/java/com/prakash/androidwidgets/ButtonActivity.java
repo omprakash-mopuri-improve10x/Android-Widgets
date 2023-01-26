@@ -25,12 +25,15 @@ public class ButtonActivity extends AppCompatActivity {
 
     private void handleAdd() {
         binding.addBtn.setOnClickListener(view -> {
-            String number1 = binding.number1Txt.getText().toString();
-            int numberOne = Integer.valueOf(number1);
-            String number2 = binding.number2Txt.getText().toString();
-            int numberTwo = Integer.valueOf(number2);
-            int sum = numberOne + numberTwo;
-            Toast.makeText(this, String.valueOf(sum), Toast.LENGTH_SHORT).show();
+            int number1 = Integer.parseInt(binding.number1Txt.getText().toString());
+            int number2 = Integer.parseInt(binding.number2Txt.getText().toString());
+            String sum = add(number1, number2);
+            Toast.makeText(this, sum, Toast.LENGTH_SHORT).show();
         });
+    }
+
+    private String add(int a, int b) {
+        int sum = a + b;
+        return String.valueOf(sum);
     }
 }
