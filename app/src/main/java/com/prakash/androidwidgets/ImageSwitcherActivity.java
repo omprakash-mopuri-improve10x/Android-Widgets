@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.AbsListView;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -25,12 +24,11 @@ public class ImageSwitcherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityImageSwitcherBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        handleImageSwitch();
+        handleImageSwitcher();
+        handleNext();
     }
 
-    private void handleImageSwitch() {
-        int[] imageSwitcherImages = {R.drawable.back, R.drawable.dasara, R.drawable.download, R.drawable.right};
-        int lengthOfImages = imageSwitcherImages.length;
+    private void handleImageSwitcher() {
         binding.imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
             public View makeView() {
@@ -43,19 +41,27 @@ public class ImageSwitcherActivity extends AppCompatActivity {
                 return imageView;
             }
         });
+    }
+
+    private void handleNext() {
         Animation aniOut = AnimationUtils.loadAnimation(this, android.R.anim.fade_out);
         Animation aniIn = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
         binding.imageSwitcher.setOutAnimation(aniOut);
         binding.imageSwitcher.setInAnimation(aniIn);
         binding.nextBtn.setOnClickListener(view -> {
-            if (count < lengthOfImages) {
-                if (count == 3) {
-                    Toast.makeText(this, "No Images", Toast.LENGTH_SHORT).show();
-                } else {
-                    count++;
-                    binding.imageSwitcher.setImageResource(imageSwitcherImages[count]);
-                }
-            }
+            setImages();
         });
+    }
+
+    private void setImages() {
+        int[] imageSwitcherImages = {R.drawable.back, R.drawable.dasara, R.drawable.download, R.drawable.right};
+        if (count < imageSwitcherImages.length) {
+            if (count == 3) {
+                Toast.makeText(this, "No Images", Toast.LENGTH_SHORT).show();
+            } else {
+                count++;
+                binding.imageSwitcher.setImageResource(imageSwitcherImages[count]);
+            }
+        }
     }
 }
