@@ -24,9 +24,14 @@ public class AutoCompleteTextViewActivity extends AppCompatActivity {
     }
 
     private void handleAutoSuggestions() {
-        String[] languages = {"Java", "Android"};
+        String[] languages = createLanguages();
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, languages);
         binding.languageAutoCompleteTxt.setAdapter(arrayAdapter);
         binding.languageAutoCompleteTxt.setTextColor(Color.BLUE);
+    }
+
+    private String[] createLanguages() {
+        String[] languages = {"Java", "Android", "Python", "HTMl", "JavaScript"};
+        return languages;
     }
 }
