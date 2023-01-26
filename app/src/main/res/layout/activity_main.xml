@@ -124,6 +124,13 @@
                 android:layout_height="wrap_content"
                 android:text="List View"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/image_switcher_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Image Switcher"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 

@@ -3,6 +3,7 @@ package com.prakash.androidwidgets;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         handleScrollView();
         handleHorizontalScroll();
         handleListView();
+        handleImageSwitcher();
     }
 
     private void handleButton() {
@@ -135,6 +137,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleListView() {
         binding.listViewBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, ListViewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleImageSwitcher() {
+        binding.imageSwitcherBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ImageSwitcherActivity.class);
             startActivity(intent);
         });
     }

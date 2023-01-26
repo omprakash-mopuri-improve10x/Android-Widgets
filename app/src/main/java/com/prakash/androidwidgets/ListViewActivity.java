@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class ListViewActivity extends AppCompatActivity {
 
     private ActivityListViewBinding binding;
-    private ArrayList languages;
+    private ArrayList<String> languages;
     private ArrayAdapter<String> arrayAdapter;
 
     @Override
@@ -27,6 +27,21 @@ public class ListViewActivity extends AppCompatActivity {
 
     private void setData() {
         languages = new ArrayList();
+        languages.add("Java");
+        languages.add("Android");
+        languages.add("HTML");
+        languages.add("CSS");
+        languages.add("Python");
+        languages.add("Java");
+        languages.add("Android");
+        languages.add("HTML");
+        languages.add("CSS");
+        languages.add("Python");
+        languages.add("Java");
+        languages.add("Android");
+        languages.add("HTML");
+        languages.add("CSS");
+        languages.add("Python");
         languages.add("Java");
         languages.add("Android");
         languages.add("HTML");
