@@ -20,7 +20,7 @@ public class ImageSliderActivity extends AppCompatActivity {
     }
 
     private void handleImageSlider() {
-        imageAdapter = new ImageAdapter(this);
+        imageAdapter = new ImageAdapter();
         binding.viewPager.setAdapter(imageAdapter);
     }
 }
