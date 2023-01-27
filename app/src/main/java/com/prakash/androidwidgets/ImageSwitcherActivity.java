@@ -57,7 +57,8 @@ public class ImageSwitcherActivity extends AppCompatActivity {
         int[] imageSwitcherImages = {R.drawable.back, R.drawable.dasara, R.drawable.download, R.drawable.right};
         if (count < imageSwitcherImages.length) {
             if (count == 3) {
-                Toast.makeText(this, "No Images", Toast.LENGTH_SHORT).show();
+                count = 0;
+                binding.imageSwitcher.setImageResource(imageSwitcherImages[count]);
             } else {
                 count++;
                 binding.imageSwitcher.setImageResource(imageSwitcherImages[count]);
