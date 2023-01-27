@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         handleProgressDialog();
         handleWebView();
         handleCustomAlertDialog();
+        handleSearchView();
     }
 
     private void handleButton() {
@@ -176,6 +177,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleCustomAlertDialog() {
         binding.customAlertDialogBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, CustomAlertdialogActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleSearchView() {
+        binding.searchViewBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, SearchViewActivity.class);
             startActivity(intent);
         });
     }

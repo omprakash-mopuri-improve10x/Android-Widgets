@@ -159,6 +159,13 @@
                 android:layout_height="wrap_content"
                 android:text="Custom Alert Dialog"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/search_view_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search View"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 
