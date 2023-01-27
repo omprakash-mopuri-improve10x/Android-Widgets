@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         handleListView();
         handleImageSwitcher();
         handleImageSlider();
+        handleProgressDialog();
     }
 
     private void handleButton() {
@@ -152,6 +153,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleImageSlider() {
         binding.imageSliderBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, ImageSliderActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleProgressDialog() {
+        binding.progressDialogBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ProgressDialogActivity.class);
             startActivity(intent);
         });
     }
