@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         handleImageSlider();
         handleProgressDialog();
         handleWebView();
+        handleCustomAlertDialog();
     }
 
     private void handleButton() {
@@ -168,6 +169,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleWebView() {
         binding.webViewBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, WebViewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleCustomAlertDialog() {
+        binding.customAlertDialogBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, CustomAlertdialogActivity.class);
             startActivity(intent);
         });
     }

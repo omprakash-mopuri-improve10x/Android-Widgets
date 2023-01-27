@@ -152,6 +152,13 @@
                 android:layout_height="wrap_content"
                 android:text="Web View"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/custom_alert_dialog_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Custom Alert Dialog"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 
