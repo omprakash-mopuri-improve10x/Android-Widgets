@@ -145,6 +145,13 @@
                 android:layout_height="wrap_content"
                 android:text="Progress Dialog"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/web_view_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Web View"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 

@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         handleImageSwitcher();
         handleImageSlider();
         handleProgressDialog();
+        handleWebView();
     }
 
     private void handleButton() {
@@ -160,6 +161,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleProgressDialog() {
         binding.progressDialogBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, ProgressDialogActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleWebView() {
+        binding.webViewBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, WebViewActivity.class);
             startActivity(intent);
         });
     }
