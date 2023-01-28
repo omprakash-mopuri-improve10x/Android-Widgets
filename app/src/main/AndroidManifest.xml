@@ -169,6 +169,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".MultiAutoCompleteTextViewActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ButtonActivity"
             android:exported="false">
             <meta-data

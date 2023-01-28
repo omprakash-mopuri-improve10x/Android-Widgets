@@ -180,6 +180,13 @@
                 android:layout_height="wrap_content"
                 android:text="Search View (Tool Bar)"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/multi_auto_complete_txt_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Multi Auto Complete Text View"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 
