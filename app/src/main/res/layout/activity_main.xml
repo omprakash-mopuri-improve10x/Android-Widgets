@@ -166,6 +166,13 @@
                 android:layout_height="wrap_content"
                 android:text="Search View"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/text_watcher_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text Watcher"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 
