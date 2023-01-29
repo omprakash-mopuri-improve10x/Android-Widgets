@@ -194,6 +194,13 @@
                 android:layout_height="wrap_content"
                 android:text="View Stub"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/tabbed_activity_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tabbed Activity"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 
