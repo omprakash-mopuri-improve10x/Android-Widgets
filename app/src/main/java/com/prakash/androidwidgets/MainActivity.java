@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         handleTextWatcher();
         handleSearchViewWithToolBar();
         handleMultiAutoCompleteTextView();
+        handleViewStub();
     }
 
     private void handleButton() {
@@ -208,6 +209,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleMultiAutoCompleteTextView() {
         binding.multiAutoCompleteTxtBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, MultiAutoCompleteTextViewActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleViewStub() {
+        binding.viewStubBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ViewStubActivity.class);
             startActivity(intent);
         });
     }

@@ -15,6 +15,13 @@
         android:theme="@style/Theme.AndroidWidgets"
         tools:targetApi="31">
         <activity
+            android:name=".ViewStubActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".SearchViewWithToolBarActivity"
             android:exported="false">
             <meta-data
