@@ -15,6 +15,13 @@
         android:theme="@style/Theme.AndroidWidgets"
         tools:targetApi="31">
         <activity
+            android:name=".DynamicRadioButtonsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".customradiobutton.CustomRadioButtonActivity"
             android:exported="false">
             <meta-data

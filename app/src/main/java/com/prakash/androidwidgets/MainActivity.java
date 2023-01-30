@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         handleTabbedActivity();
         handleCustomCheckBox();
         handleCustomRadioBtn();
+        handleDynamicRadioBtn();
     }
 
     private void handleButton() {
@@ -240,6 +241,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleCustomRadioBtn() {
         binding.customRadioBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, CustomRadioButtonActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleDynamicRadioBtn() {
+        binding.dynamicRadioBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, DynamicRadioButtonsActivity.class);
             startActivity(intent);
         });
     }

@@ -215,6 +215,13 @@
                 android:layout_height="wrap_content"
                 android:text="Custom Radio Button"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/dynamic_radio_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dynamic Radio Button"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 
