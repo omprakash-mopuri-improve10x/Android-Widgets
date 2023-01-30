@@ -24,9 +24,11 @@ public class RadioButtonsActivity extends AppCompatActivity {
             if (binding.maleRb.isChecked()) {
                 String male = binding.maleRb.getText().toString();
                 Toast.makeText(this, male, Toast.LENGTH_SHORT).show();
-            } else {
+            } else if (binding.femaleRb.isChecked()){
                 String female = binding.femaleRb.getText().toString();
                 Toast.makeText(this, female, Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Nothing selected", Toast.LENGTH_SHORT).show();
             }
         });
     }

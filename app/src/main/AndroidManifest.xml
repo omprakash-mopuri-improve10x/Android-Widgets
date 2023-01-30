@@ -15,6 +15,13 @@
         android:theme="@style/Theme.AndroidWidgets"
         tools:targetApi="31">
         <activity
+            android:name=".CustomCheckBoxActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".TabbedActivity"
             android:exported="false"
             android:label="@string/title_activity_tabbed"
@@ -164,7 +171,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".CheckBoxActivity"
+            android:name=".checkbox.CheckBoxActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

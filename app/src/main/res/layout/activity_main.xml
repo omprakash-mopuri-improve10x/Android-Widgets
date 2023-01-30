@@ -201,6 +201,13 @@
                 android:layout_height="wrap_content"
                 android:text="Tabbed Activity"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/custom_check_box_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Custom Check Box"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 
