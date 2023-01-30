@@ -11,7 +11,7 @@ public class CheckBoxControllerImpl implements CheckBoxController{
         }
         if (isCoffeeSelected) {
             totalAmount += 50;
-            orderDetails += "\nCoffe Rs.50";
+            orderDetails += "\nCoffee Rs.50";
         }
         if (isTeaSelected) {
             totalAmount += 25;

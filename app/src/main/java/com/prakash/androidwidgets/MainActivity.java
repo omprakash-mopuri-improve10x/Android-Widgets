@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.prakash.androidwidgets.checkbox.CheckBoxActivity;
+import com.prakash.androidwidgets.customradiobutton.CustomRadioButtonActivity;
 import com.prakash.androidwidgets.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         handleViewStub();
         handleTabbedActivity();
         handleCustomCheckBox();
+        handleCustomRadioBtn();
     }
 
     private void handleButton() {
@@ -231,6 +233,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleCustomCheckBox() {
         binding.customCheckBoxBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, CustomCheckBoxActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleCustomRadioBtn() {
+        binding.customRadioBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, CustomRadioButtonActivity.class);
             startActivity(intent);
         });
     }
