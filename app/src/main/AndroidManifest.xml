@@ -101,7 +101,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ImageSwitcherActivity"
+            android:name=".imageswitcher.ImageSwitcherActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -1,4 +1,4 @@
-package com.prakash.androidwidgets;
+package com.prakash.androidwidgets.imageswitcher;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,23 +12,26 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
+import com.prakash.androidwidgets.R;
 import com.prakash.androidwidgets.databinding.ActivityImageSwitcherBinding;
 
-public class ImageSwitcherActivity extends AppCompatActivity {
+public class ImageSwitcherActivity extends AppCompatActivity implements ImageSwitcherView {
 
     private ActivityImageSwitcherBinding binding;
-    int count = 0;
+    private int[] imageSwitcherImages = {R.drawable.back, R.drawable.dasara, R.drawable.download, R.drawable.right};
+    private int currentImageIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityImageSwitcherBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        handleImageSwitcher();
+        showImage(R.drawable.back);
         handleNext();
     }
 
-    private void handleImageSwitcher() {
+    @Override
+    public void showImage(int resourceId) {
         binding.imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
             public View makeView() {
@@ -37,32 +40,21 @@ public class ImageSwitcherActivity extends AppCompatActivity {
                         ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.MATCH_PARENT
                 ));
                 imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-                imageView.setImageResource(R.drawable.back);
+                imageView.setImageResource(resourceId);
                 return imageView;
             }
         });
     }
 
-    private void handleNext() {
+    @Override
+    public void handleNext() {
         Animation aniOut = AnimationUtils.loadAnimation(this, android.R.anim.fade_out);
         Animation aniIn = AnimationUtils.loadAnimation(this, android.R.anim.fade_in);
         binding.imageSwitcher.setOutAnimation(aniOut);
         binding.imageSwitcher.setInAnimation(aniIn);
         binding.nextBtn.setOnClickListener(view -> {
-            setImages();
+            currentImageIndex = new ImageSwitcherImpl().getNextImageIndex(currentImageIndex, imageSwitcherImages.length);
+            binding.imageSwitcher.setImageResource(imageSwitcherImages[currentImageIndex]);
         });
-    }
-
-    private void setImages() {
-        int[] imageSwitcherImages = {R.drawable.back, R.drawable.dasara, R.drawable.download, R.drawable.right};
-        if (count < imageSwitcherImages.length) {
-            if (count == imageSwitcherImages.length - 1) {
-                count = 0;
-                binding.imageSwitcher.setImageResource(imageSwitcherImages[count]);
-            } else {
-                count++;
-                binding.imageSwitcher.setImageResource(imageSwitcherImages[count]);
-            }
-        }
     }
 }

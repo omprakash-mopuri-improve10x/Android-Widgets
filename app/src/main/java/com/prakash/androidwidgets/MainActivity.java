@@ -8,6 +8,7 @@ import android.os.Bundle;
 import com.prakash.androidwidgets.checkbox.CheckBoxActivity;
 import com.prakash.androidwidgets.customradiobutton.CustomRadioButtonActivity;
 import com.prakash.androidwidgets.databinding.ActivityMainBinding;
+import com.prakash.androidwidgets.imageswitcher.ImageSwitcherActivity;
 
 public class MainActivity extends AppCompatActivity {
 
